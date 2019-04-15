@@ -1,0 +1,30 @@
+1,创建文件  
+2,添加暂存区  git add 文件名
+3,提交git仓库  git commit -m   "提交说明/注释"
+
+
+查看状态   git status
+将暂存区内容恢复到先前的状态  git  reset HEAD  (文件名)可以指定可以不指定
+查看历史提交记录   git log 
+HEAD 的上一个节点   git reset HEAD~  回滚到暂存区
+返回上一个节点   git reset --soft  HEAD~
+返回上一个节点，直接删除   git reset --hard  HEAD~  将暂存区还原到工作目录
+不仅可以往回滚，还可以往前滚   git   reset  ID号
+比较暂存区域与提交的差别  git diff
+比较两个节点   git diff  ID1 ID2
+比较当前工作目录和git仓库中的快照   git  diff 快照的ID
+比较暂存区和git仓库的快照   git diff --cached
+
+修改提交，假如提交到仓库发现有文件没有添加， 刚一提交到仓库，发现版本说明写的不够全面，  执行  git commit --amend
+在git中删除文件   git rm "文件名"  该命令只是删除工作目录和暂存区域的文件
+重命名文件    git mv  旧的文件名  新的文件名
+
+git分支  
+创建分支   git branch "分支名称"   
+看分支      git log   --decorate  可以加 --oneline
+切换分支   git  checkout  “分支名"
+图形化查看   git log  --decorate --oneline --graph --all 
+
+分支的合并   git merge  分支名 
+
+
